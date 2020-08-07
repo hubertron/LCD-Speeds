@@ -1,0 +1,17 @@
+How to install a new dtc (Raspbian):
+extract dtc archive
+cd to its dir
+run:
+$ sudo apt install flex bison python-dev swig
+$ make
+$ make install
+dtc binary will be compiled
+
+how to edit dts:
+open owo.dts, find "spi-max-frequency" under "waveshare35a@0".
+For example <0x4C4B400>;
+where is 4C4B400 a hexadecimal number
+save it and run:
+./dtc -O dtb -o ~/Desktop/new.dto ~/Desktop/owo.dts
+
+precompiled dts is also attached in this archive.
